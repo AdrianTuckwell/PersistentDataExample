@@ -3,4 +3,5 @@
     <string name="question">Put some text here</string>
     <string name="save_text">Save</string>
     <string name="saved_text">Saved text will be displayed here...</string>
+    <string name="say_hello">Hello!</string>
 </resources>
