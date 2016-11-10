@@ -6,10 +6,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * Created by sandy on 10/08/2016.
@@ -26,6 +28,18 @@ public class MainActivity extends AppCompatActivity
         MenuInflater menuInflater = getMenuInflater();
         menuInflater.inflate(R.menu.activity_main, menu);
         return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.action_hello) {
+            Log.d("Menu", "Menu item 'hello' clicked");
+
+            Toast.makeText(MainActivity.this,R.string.menu_toast_hello,Toast.LENGTH_SHORT).show();
+
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     @Override
